@@ -3,7 +3,7 @@ Author: Gabriel Heinzer (dev@gabrielheinzer.ch)
 __main__.py (c) 2021
 Desc: This is a simple script for adding services in linux
 Created:  2021-11-30T17:58:19.750Z
-Modified: 2021-12-01T18:40:42.779Z
+Modified: 2021-12-01T18:44:57.581Z
 """
 import os
 import sys
@@ -22,7 +22,7 @@ def main():
         cmd = input("Please enter the path to the script that has to be executed: ")
         restartmode = input("Do you want to restart the service after it stops? (no, always, on-failure, on-abnormal, on-watchdog, on-success): ")
 
-        if(restartmode in ["no", "always", "on-failure", "on-abnormal", "on-watchdog", "on-success"]):
+        if(not restartmode in ["no", "always", "on-failure", "on-abnormal", "on-watchdog", "on-success"]):
             print("Your input for the restart mode is not valid. Please try again.")
             continue
 
