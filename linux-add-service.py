@@ -3,7 +3,7 @@ Author: Gabriel Heinzer (dev@gabrielheinzer.ch)
 __main__.py (c) 2021
 Desc: This is a simple script for adding services in linux
 Created:  2021-11-30T17:58:19.750Z
-Modified: 2021-12-01T18:44:57.581Z
+Modified: 2021-12-01T18:47:00.805Z
 """
 import os
 import sys
@@ -57,7 +57,7 @@ def main():
             exit()
             
 
-    sys.stdout.write("Installing service... : Creating service file...")
+    sys.stdout.write("\nInstalling service... : Creating service file...")
 
     try:
         serviceFile = open(filepath, "w")
@@ -66,7 +66,7 @@ def main():
     except PermissionError:
         print("Was not able to create the file due to a permission error. Please rerun this script as root.")
 
-    sys.stdout.write("Installing service... : Running deamon-reload...")
+    sys.stdout.write("\rInstalling service... : Running deamon-reload...    ")
 
     os.system("systemctl daemon-reload")
 
