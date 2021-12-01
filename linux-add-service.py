@@ -3,7 +3,7 @@ Author: Gabriel Heinzer (dev@gabrielheinzer.ch)
 __main__.py (c) 2021
 Desc: This is a simple script for adding services in linux
 Created:  2021-11-30T17:58:19.750Z
-Modified: 2021-12-01T19:05:15.359Z
+Modified: 2021-12-01T19:06:08.686Z
 """
 import os
 import sys
@@ -11,11 +11,10 @@ import platform
 def main():
     if("-h" in sys.argv):
         print("""
-        
-        linux-add-service by Gabriel Heinzer
-        These are the arguments you can pass:
-            -f  Force the execution and ignore detected OS.
-            -h  Display this help
+linux-add-service by Gabriel Heinzer
+These are the arguments you can pass:
+    -f  Force the execution and ignore detected OS.
+    -h  Display this help
         """)
         exit()
     if(platform.system() != "Linux" and not "-f" in sys.argv):
