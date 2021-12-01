@@ -3,7 +3,7 @@ Author: Gabriel Heinzer (dev@gabrielheinzer.ch)
 __main__.py (c) 2021
 Desc: This is a simple script for adding services in linux
 Created:  2021-11-30T17:58:19.750Z
-Modified: 2021-12-01T19:04:31.271Z
+Modified: 2021-12-01T19:05:15.359Z
 """
 import os
 import sys
@@ -17,6 +17,7 @@ def main():
             -f  Force the execution and ignore detected OS.
             -h  Display this help
         """)
+        exit()
     if(platform.system() != "Linux" and not "-f" in sys.argv):
         print("You do not seem to run Linux. If you execute this on linux, but this error message appears, try running this script with -f.")
         exit()
