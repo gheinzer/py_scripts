@@ -3,7 +3,7 @@ Author: Gabriel Heinzer (dev@gabrielheinzer.ch)
 linux-add-command-alias.py (c) 2021
 Desc: This script helps adding command aliases in linux.
 Created:  2021-12-01T19:33:33.153Z
-Modified: 2021-12-01T19:47:13.915Z
+Modified: 2021-12-01T19:58:16.745Z
 """
 import os
 import sys
@@ -40,7 +40,7 @@ These are the arguments you can pass:
     print("Writing file...")
     bashrc = open(os.path.expanduser("~/.bashrc"), "a")
     bashrc.write(f'\nalias {name}="{cmd}"')
-    print("Finished.")
+    os.system(f'alias {name}="{cmd}')
 
 if __name__ == "__main__":
     main()
