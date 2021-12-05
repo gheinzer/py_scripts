@@ -40,7 +40,7 @@ These are the arguments you can pass:
     print("Writing file...")
     bashrc = open(os.path.expanduser("~/.bashrc"), "a")
     bashrc.write(f'\nalias {name}="{cmd}"')
-    os.system(f'alias {name}="{cmd}')
+    os.system(f'alias {name}="{cmd}"')
 
 if __name__ == "__main__":
     main()
